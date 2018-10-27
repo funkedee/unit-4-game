@@ -169,7 +169,6 @@ $(document).ready(function () {
             $("#gameplay-text").text("You have been defeated. Click restart to play again.");
 
             // replace attack button with restart button
-            // $(".attack_button").remove();
             $("#defender").html("<button class= 'restart_button'>Restart</button>")
 
             rpgGame.restart();
@@ -180,7 +179,6 @@ $(document).ready(function () {
              $("#gameplay-text").text("YOU WIN!!! Click restart to play again.");
 
              // replace attack button with restart button
-            //  $(".attack_button").remove();
              $("#defender").html("<button class= 'restart_button'>Restart</button>")
  
              rpgGame.restart();
