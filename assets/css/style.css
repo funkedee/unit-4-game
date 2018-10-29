@@ -1,6 +1,6 @@
 header {
     text-align: center;
-    height: 100px;
+    height: 75px;
     background-color: black;
     position: relative;
 }
@@ -9,14 +9,14 @@ header {
     color: gold;
     font-size: 70px;
     width: 160px;
-    height: 100px;
-    padding: 15px;
+    height: 75px;
     margin: auto;
+    position: relative;
 }
 
 .logo1 {
     float: left;
-    height: 100px;
+    height: 75px;
     position: absolute;
     left: 10px;
     top: 0px
@@ -25,27 +25,27 @@ header {
 
 .logo2 {
     float: right;
-    height: 100px;
+    height: 75px;
     position: absolute;
     right: 10px;
     top: 0px
 }
 
-.rebel_logo {
-    height: 100px;
-}
-
-#container {
+body {
     background-image: url("../images/background.png");
-    height: 100%;
-    width: 100%;
-    background-size: contain;
+    background-size: 100%;
 }
 
 main {
-    padding: 10px;
-    margin: auto;
     text-align: center;
+}
+
+#characters {
+    padding: 10px 10px 0px 10px;
+}
+
+#defender {
+    padding: 10px;
 }
 
 button {
@@ -71,4 +71,11 @@ h2 {
 #gameplay-text {
     color: gold;
     font-size: 18px;
+    padding: 10px;
+}
+
+.attack_button {
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
 }

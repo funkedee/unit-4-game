@@ -1,34 +1,34 @@
 $(document).ready(function () {
     var obiWanKenobi = {
         name: "Obi-Wan-Kenobi",
-        healthPoints: 130,
-        originalAttackPower: 10,
-        attackPower: 10,
-        counterAttackPower: 19,
+        healthPoints: 135,
+        originalAttackPower: 12,
+        attackPower: 12,
+        counterAttackPower: 12,
     };
 
     var emperorPalpatine = {
         name: "Emperor Palpatine",
         healthPoints: 120,
-        originalAttackPower: 8,
-        attackPower: 8,
-        counterAttackPower: 17,
+        originalAttackPower: 14,
+        attackPower: 14,
+        counterAttackPower: 15,
     };
 
     var darthVader = {
         name: "Darth Vader",
-        healthPoints: 140,
+        healthPoints: 125,
         originalAttackPower: 10,
         attackPower: 10,
-        counterAttackPower: 12,
+        counterAttackPower: 16,
     };
 
     var yoda = {
         name: "Yoda",
-        healthPoints: 150,
+        healthPoints: 130,
         originalAttackPower: 12,
         attackPower: 12,
-        counterAttackPower: 18,
+        counterAttackPower: 17,
     };
 
     var rpgGame = {
@@ -98,14 +98,14 @@ $(document).ready(function () {
                     // adds defender class to it
                     $(this).addClass("defender");
 
+                    // creates attack button
+                    $("#defender").append("<button class= 'attack_button'>Attack!</button>")
+
                     // displays defender
                     $("#defender").append("<h2 class ='defender_text'>Defender<h2>");
 
                     // moves it to #defender div
                     $("#defender").append(this);
-
-                    // creates attack button
-                    $("#defender").append("<button class= 'attack_button'>Attack</button>")
 
                     // changes "choose which enemy to attack" to "enemies"
                     $("#enemies h2").text("Enemies")
@@ -180,6 +180,9 @@ $(document).ready(function () {
 
              // replace attack button with restart button
              $("#defender").html("<button class= 'restart_button'>Restart</button>")
+
+            //  clear enemies div
+            $("#enemies").empty();
  
              rpgGame.restart();
         },
@@ -189,13 +192,13 @@ $(document).ready(function () {
             $(".restart_button").on("click", function () {
 
                 // reset variables
-                obiWanKenobi.healthPoints = 130;
-                obiWanKenobi.attackPower = 10;
+                obiWanKenobi.healthPoints = 135;
+                obiWanKenobi.attackPower = 12;
                 emperorPalpatine.healthPoints = 120;
-                emperorPalpatine.attackPower = 8;
-                darthVader.healthPoints = 140;
+                emperorPalpatine.attackPower = 14;
+                darthVader.healthPoints = 125;
                 darthVader.attackPower = 10;
-                yoda.healthPoints = 150;
+                yoda.healthPoints = 130;
                 yoda.attackPower = 12;
                 rpgGame.yourCharacter = "";
                 rpgGame.defender = "";
@@ -207,7 +210,7 @@ $(document).ready(function () {
                 $(".choose_character").text("Choose your character");
 
                 // reset characters
-                $("#characters").html("<h2 class='choose_character'>Choose your character</h2><button id='obi-wan-kenobi' class='character_button'><div class='name'>Obi-Wan-Kenobi</div><div class='character_pic'><img class='character_img' src='assets/images/obi-wan-kenobi.jpg' alt='obi-wan-kenobi pic'></div><div class='character_hp'>HP: <span class='hp'>130</span></div></button><button id='emperor-palpatine' class='character_button'><div class='name'>Emperor Palpatine</div><div class='character_pic'><img class='character_img' src='assets/images/emperor-palpatine.jpg' alt='emperor paplatine pic'></div><div class='character_hp'>HP: <span class='hp'>120</span></div></button><button id='darth-vader' class='character_button'><div class='name'>Darth Vader</div><div class='character_pic'><img class='character_img' src='assets/images/darth-vader.jpg' alt='darth vader pic'></div><div class='character_hp'>HP: <span class='hp'>140</span></div></button><button id='yoda' class='character_button'><div class='name'>Yoda</div><div class='character_pic'><img class='character_img' src='assets/images/yoda.jpg' alt='yoda pic'></div><div class='character_hp'>HP: <span class='hp'>150</span></div></button>");
+                $("#characters").html("<h2 class='choose_character'>Choose your character</h2><button id='obi-wan-kenobi' class='character_button'><div class='name'>Obi-Wan-Kenobi</div><div class='character_pic'><img class='character_img' src='assets/images/obi-wan-kenobi.jpg' alt='obi-wan-kenobi pic'></div><div class='character_hp'>HP: <span class='hp'>135</span></div></button><button id='emperor-palpatine' class='character_button'><div class='name'>Emperor Palpatine</div><div class='character_pic'><img class='character_img' src='assets/images/emperor-palpatine.jpg' alt='emperor paplatine pic'></div><div class='character_hp'>HP: <span class='hp'>120</span></div></button><button id='darth-vader' class='character_button'><div class='name'>Darth Vader</div><div class='character_pic'><img class='character_img' src='assets/images/darth-vader.jpg' alt='darth vader pic'></div><div class='character_hp'>HP: <span class='hp'>125</span></div></button><button id='yoda' class='character_button'><div class='name'>Yoda</div><div class='character_pic'><img class='character_img' src='assets/images/yoda.jpg' alt='yoda pic'></div><div class='character_hp'>HP: <span class='hp'>130</span></div></button>");
 
                 // clear other divs
                 $("#defender").empty();
